@@ -6,17 +6,13 @@ const false3 = "(peluche {) bici";
 const false4 = "() bici";
 
 
-const invalid_chars = ['[', ']', '{', '}'];
+const invalid_strings = ['[', ']', '{', '}', "()"];
 
 function isValid(letter) {
     let par = 0;
 
-    if (letter.includes("()")) {
-        return false;
-    }
-
-    for (let i = 0; i < invalid_chars.length; ++i) {
-        if (letter.includes(invalid_chars[i])) {
+    for (let i = 0; i < invalid_strings.length; ++i) {
+        if (letter.includes(invalid_strings[i])) {
             return false;
         }
     }
