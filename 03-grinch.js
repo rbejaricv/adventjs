@@ -1,14 +1,5 @@
-const true1 = "bici coche (balón) bici coche peluche";
-const true2 = "(muñeca) consola bici";
-const false1 = "bici coche (balón bici coche";
-const false2 = "peluche (bici [coche) bici coche balón";
-const false3 = "(peluche {) bici";
-const false4 = "() bici";
-
-
-const invalid_strings = ['[', ']', '{', '}', "()"];
-
 function isValid(letter) {
+    const invalid_strings = ['[', ']', '{', '}', "()"];
     let par = 0;
 
     for (let i = 0; i < invalid_strings.length; ++i) {
@@ -32,6 +23,12 @@ function isValid(letter) {
 }
 
 function main() {
+    const true1 = "bici coche (balón) bici coche peluche";
+    const true2 = "(muñeca) consola bici";
+    const false1 = "bici coche (balón bici coche";
+    const false2 = "peluche (bici [coche) bici coche balón";
+    const false3 = "(peluche {) bici";
+    const false4 = "() bici";
     console.log(isValid(true1));
     console.log(isValid(true2));
     console.log(isValid(false1));
